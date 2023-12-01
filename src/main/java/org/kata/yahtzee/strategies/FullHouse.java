@@ -18,6 +18,6 @@ public class FullHouse implements ScoringStrategy {
             if (diceCount == 2 || diceCount == 3)
                 return Arrays.stream(roll).sum();
         }
-        return 0;
+        return INVALID_ROLL_SCORE;
     }
 }

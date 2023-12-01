@@ -18,6 +18,6 @@ public class TwoPairs implements ScoringStrategy {
                 i++;
             }
         }
-        return (pairsCount == 2) ? sum : 0;
+        return (pairsCount == 2) ? sum : INVALID_ROLL_SCORE;
     }
 }

@@ -14,6 +14,6 @@ public class Pairs implements ScoringStrategy {
             else
                 i--;
         }
-        return 0;
+        return INVALID_ROLL_SCORE;
     }
 }

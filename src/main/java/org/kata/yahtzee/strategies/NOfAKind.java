@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 public class NOfAKind implements ScoringStrategy {
     private final int categoryValue;
+    private final int YAHTZEE_VALUE = 5;
+    final private int YAHTZEE_MAX_SCORE = 50;
+
 
     public NOfAKind(int categoryValue) {
         this.categoryValue = categoryValue;
@@ -23,9 +26,12 @@ public class NOfAKind implements ScoringStrategy {
                 }
             }
             if (isNOfAKind) {
-                return roll[i] * categoryValue;
+                if(categoryValue == YAHTZEE_VALUE)
+                    return YAHTZEE_MAX_SCORE;
+                else
+                    return roll[i] * categoryValue;
             }
         }
-        return 0;
+        return INVALID_ROLL_SCORE;
     }
 }
